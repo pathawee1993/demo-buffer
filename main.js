@@ -1,4 +1,4 @@
-console.log(process.memoryUsage())
+console.log("start > ", process.memoryUsage())
 
 buff1 = new Buffer(256);
 buff1.write("hello world");
@@ -14,6 +14,8 @@ console.log("buff3 > ", buff3.toString())
 var buff4 = new Buffer(512);
 buff3.copy(buff4);
 console.log("buff4 > ", buff4.toString())
+console.log("created buffer > ", process.memoryUsage())
 
-console.log(process.memoryUsage())
+var myString = "adasdasdasdasdasdasdasdsasdasdsaasdasdasdadasdasdasdasdasdasdasdsasdasdsaasdasdasdadasdasdasdasdasdasdasdsasdasdsaasdasdasdadasdasdasdasdasdasdasdsasdasdsaasdasdasd"
+console.log("created string > ", process.memoryUsage())
 
